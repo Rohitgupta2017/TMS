@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <title>Driver Info</title>
+    <style>
+    body {background-image: url("bus.jpg");		
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+.a {color:white;
+    background-color: black;
+    opacity: 0.7;
+    text-align: center;} 
+        
+table,th,td{background-color: azure;
+     margin-top: 20px;
+     border:1px solid black;
+     border-collapse: collapse;
+     padding:15px;
+     
+        }
+        .n  {color:white;}
+        table.bc {display: none;}
+        
+        
+</style>
+    </head>
+<body>
+    
+    <div class="a"><h1>Driver Information</h1>
+    </div>
+    <div><form class="n">
+           Driver ID :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="Driver ID" id="drid"><br><br>
+           Route Number :<input type="text" name="Route Number" id="rn">
+           <button type="button" onclick="setValue()" id="bd">Search</button></form></div>
+    <div>
+    
+       
+            <Center>
+                <table class="ab">
+                <tr><th>Driver ID</th><th>Route Number</th><th>Driver Name</th><th>Contact Number</th><th>City</th></tr>
+                </table>
+                    
+                
+                
+                <table class="bc" align>
+            <tr><th>Driver ID</th><th>Route Number</th><th>Driver Name</th><th>Contact Number</th><th>City</th></tr>
+           
+                 <tr><td id="11">1</td><td id="12">55</td><td id="13">Harish</td><td id="14">9456632101</td><td id="15">Ambala Cantt.</td></tr>
+                 <tr><td id="21">2</td><td id="22">55</td><td id="23">Jagmohan</td><td id="24">9478631042</td><td id="25">Ambala</td></tr>
+                 <tr><td id="31">3</td><td id="32">55</td><td id="33">Baldev Singh</td><td id="34">9456256731</td><td id="35">Ambala Cantt.</td></tr>
+            <tr><td id="41">4/td><td id="42">51</td><td id="43">Shyam Lal</td><td id="44">9564123572</td><td id="45">Ambala Cantt.</td></tr>
+                </table></Center></div>
+    <script>
+    function setValue(){
+    var c = document.getElementById("drid").value;
+    var d =  document.getElementById("rn").value;
+        var e=document.getElementById("ab");
+        document.getElementById("ab").style.display = "block";
+        var y=document.createElement("tr");
+        e.appendChild(y);
+    var a1 = document.createElement("td");
+        var a2 = document.createElement("td");
+        var a3 = document.createElement("td");
+        var a4 = document.createElement("td");
+        var a5 = document.createElement("td");
+        var d1,d2,d3,d4,d5;
+        switch(c)
+            {case 1:  d1=document.getElementById("11").value;
+                     d2=document.getElementById("12").value;
+                     d3=document.getElementById("13").value;
+                     d4=document.getElementById("14").value;
+                     d5=document.getElementById("15").value;
+                     break;
+                case 2: d1=document.getElementById("21").value;
+                        d2=document.getElementById("22").value;
+                        d3=document.getElementById("23").value;
+                        d4=document.getElementById("24").value;
+                        d5=document.getElementById("25").value;
+                        break;
+                case 3: d1=document.getElementById("31").value;
+                        d2=document.getElementById("32").value;
+                        d3=document.getElementById("33").value;
+                        d4=document.getElementById("34").value;
+                        d5=document.getElementById("35").value;
+                        window.alert(d1);
+                        conslode.log(d1);
+                        }
+    var b1 =document.createTextNode(d1);
+        a1.appendChild(b1);
+         var b2 =document.createTextNode(d2);
+         window.alert(b2);
+        a2.appendChild(b2);
+         var b3 =document.createTextNode(d3);
+        a3.appendChild(b3);
+         var b4 =document.createTextNode(d4);
+        a4.appendChild(b4);
+         var b5 =document.createTextNode(d5);
+        a5.appendChild(b5);
+    
+        
+        var w=e.lastChild;
+        w.appendChild(a1);
+        w.appendChild(a2);
+        w.appendChild(a3);
+        w.appendChild(a4);
+        w.appendChild(a5);
+    }
+    </script>
+    </body>
+    </html>
